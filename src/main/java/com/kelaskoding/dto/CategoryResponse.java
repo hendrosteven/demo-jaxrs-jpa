@@ -7,12 +7,13 @@ package com.kelaskoding.dto;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author jarvis
  */
-
+@XmlRootElement
 public class CategoryResponse {
     private Long id;
     private String name;

@@ -36,7 +36,7 @@ public class OtherCategoryResource {
     private CategoryRepo repoCategory;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Path("/{id}")
     public Response findOneCategoryById(@PathParam("id")Long id) {
         CategoryResponse response = new CategoryResponse();
