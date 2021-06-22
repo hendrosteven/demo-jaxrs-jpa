@@ -1,8 +1,11 @@
 com/kelaskoding/resource/HelloResource.class
+com/kelaskoding/resource/OtherCategoryResource.class
 com/kelaskoding/repo/ProductRepo.class
 com/kelaskoding/entity/Category.class
+com/kelaskoding/dto/CategoryResponse.class
 com/kelaskoding/entity/Product.class
 com/kelaskoding/resource/CategoryResource.class
+com/kelaskoding/dto/ProductResponse.class
 com/kelaskoding/resource/ApplicationConfig.class
 com/kelaskoding/resource/ProductResource.class
 com/kelaskoding/repo/CategoryRepo.class

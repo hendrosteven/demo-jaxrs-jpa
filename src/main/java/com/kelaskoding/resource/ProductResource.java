@@ -5,7 +5,6 @@
  */
 package com.kelaskoding.resource;
 
-import com.kelaskoding.entity.Category;
 import com.kelaskoding.entity.Product;
 import com.kelaskoding.repo.ProductRepo;
 import java.util.List;
