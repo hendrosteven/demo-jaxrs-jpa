@@ -36,10 +36,12 @@ public class CategoryRepo {
         return em.find(Category.class, id);
     }
     
+    @Transactional(REQUIRED)
     public void removeOne(Long id){
         em.remove(em.find(Category.class, id));
     }
     
+    @Transactional(REQUIRED)
     public Category update(Category category){
         return em.merge(category);
     }
