@@ -1,0 +1,6 @@
+com/kelaskoding/resource/HelloResource.class
+com/kelaskoding/entity/Category.class
+com/kelaskoding/entity/Product.class
+com/kelaskoding/resource/CategoryResource.class
+com/kelaskoding/resource/ApplicationConfig.class
+com/kelaskoding/repo/CategoryRepo.class
