@@ -1,6 +1,8 @@
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/resource/CategoryResource.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/resource/ApplicationConfig.java
+/Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/repo/ProductRepo.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/resource/HelloResource.java
+/Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/resource/ProductResource.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/repo/CategoryRepo.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/entity/Category.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/entity/Product.java

@@ -107,5 +107,19 @@ public class Product implements Serializable {
         this.description = description;
     }
 
+    /**
+     * @return the category
+     */
+    public Category getCategory() {
+        return category;
+    }
+
+    /**
+     * @param category the category to set
+     */
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     
 }
