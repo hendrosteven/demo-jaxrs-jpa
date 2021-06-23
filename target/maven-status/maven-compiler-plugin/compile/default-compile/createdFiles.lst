@@ -1,6 +1,7 @@
 com/kelaskoding/repo/ProductRepo.class
 com/kelaskoding/dto/CategoryRequest.class
 com/kelaskoding/validator/UniqueCodeConstraintValidator.class
+com/kelaskoding/dto/ErrorMessageResponse.class
 com/kelaskoding/resource/ApplicationConfig.class
 com/kelaskoding/resource/ProductResource.class
 com/kelaskoding/resource/HelloResource.class

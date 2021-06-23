@@ -9,6 +9,7 @@
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/dto/CategoryRequest.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/resource/CategoryResource.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/exception/MyExceptionMapper.java
+/Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/dto/ErrorMessageResponse.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/dto/ProductResponse.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/validator/UniqueCode.java
 /Users/jarvis/NetBeansProjects/demo-db-jpa/src/main/java/com/kelaskoding/resource/ProductResource.java

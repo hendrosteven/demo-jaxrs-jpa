@@ -5,8 +5,10 @@
  */
 package com.kelaskoding.exception;
 
+import com.kelaskoding.dto.ErrorMessageResponse;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
@@ -22,16 +24,17 @@ public class MyExceptionMapper implements ExceptionMapper<ConstraintViolationExc
     public Response toResponse(ConstraintViolationException exception) {
         return Response.status(Response.Status.BAD_REQUEST)
                 .entity(prepareMessage(exception))
-                .type("text/plain")
+                .type(MediaType.APPLICATION_JSON)
                 .build();
     }
 
-    private String prepareMessage(ConstraintViolationException exception) {
-        String msg = "";
+    private ErrorMessageResponse prepareMessage(ConstraintViolationException exception) {
+        ErrorMessageResponse errors = new ErrorMessageResponse();
         for (ConstraintViolation<?> cv : exception.getConstraintViolations()) {
-            msg += cv.getPropertyPath() + " " + cv.getMessage() + "\n";
+            errors.getErrors().put(cv.getPropertyPath()+"", cv.getMessage());
         }
-        return msg;
+        errors.setStatus(true);
+        return errors;
     }
 
 }
