@@ -36,6 +36,10 @@ public class ProductRepo {
          return em.createQuery("SELECT x FROM Product x WHERE x.category.id="+id).getResultList();
     }
     
+    public Product findByCode(String code){
+        return (Product) em.createQuery("SELECT x FROM Product x WHERE x.code="+code, Product.class).getSingleResult();
+    }
+    
     public Product findOne(Long id){
         return em.find(Product.class, id);
     }
