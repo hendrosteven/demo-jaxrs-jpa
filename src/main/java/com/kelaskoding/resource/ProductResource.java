@@ -38,15 +38,20 @@ public class ProductResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createOne(@Valid ProductRequest request) {
-        
+        System.out.println(request);
+
         Product product = new Product();
-        product.setCode(request.getCode());
-        product.setName(request.getName());
-        product.setDescription(request.getDescription());
-        product.setPrice(request.getPrice());
-        product.setCategory(request.getCategory());
-        
-        repo.create(product);
+        try {
+            product.setCode(request.getCode());
+            product.setName(request.getName());
+            product.setDescription(request.getDescription());
+            product.setPrice(request.getPrice());
+            product.setCategory(request.getCategory());
+
+            repo.create(product); 
+        } catch (Exception ex) { 
+            ex.printStackTrace();
+        }
         return Response.ok(product).build();
     }
 

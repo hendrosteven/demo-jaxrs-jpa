@@ -10,6 +10,7 @@ import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import static javax.transaction.Transactional.TxType.REQUIRED;
 
@@ -36,8 +37,11 @@ public class ProductRepo {
          return em.createQuery("SELECT x FROM Product x WHERE x.category.id="+id).getResultList();
     }
     
-    public Product findByCode(String code){
-        return (Product) em.createQuery("SELECT x FROM Product x WHERE x.code="+code, Product.class).getSingleResult();
+    
+    public Long findByCode(String code){
+        Query query = em.createQuery("SELECT COUNT(x.id) FROM Product x WHERE x.code = :code").setParameter("code", code);
+        Long count = (Long) query.getSingleResult();
+        return count;
     }
     
     public Product findOne(Long id){

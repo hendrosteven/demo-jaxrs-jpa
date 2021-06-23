@@ -15,16 +15,16 @@ import javax.validation.constraints.Size;
  *
  * @author jarvis
  */
-public class ProductRequest {
+public class ProductRequest { 
     
     @NotNull(message = "Code is required")
     @Pattern(regexp = "PR[0-9]+", message = "Code must be start with \'PR\' and follow by digits") //PR003 
     @Size(min = 3, max = 5, message = "Code length must be in 3 to 5 character")
-    @UniqueCode
+    @UniqueCode(message = "code already in used")  
     private String code;
     
     @NotNull(message = "Name is required")
-    private String name;
+    private String name; 
     
     private String description;
         
