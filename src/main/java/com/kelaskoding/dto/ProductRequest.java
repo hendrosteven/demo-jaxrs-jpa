@@ -7,6 +7,8 @@ package com.kelaskoding.dto;
 
 import com.kelaskoding.entity.Category;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -14,15 +16,16 @@ import javax.validation.constraints.NotNull;
  */
 public class ProductRequest {
     
-    @NotNull
+    @NotNull(message = "Code is required")
+    @Pattern(regexp = "PR[0-9]+", message = "Code must be start with \'PR\' and follow by digits") //PR003 
+    @Size(min = 3, max = 5, message = "Code length must be in 3 to 5 character")
     private String code;
     
-    @NotNull
+    @NotNull(message = "Name is required")
     private String name;
     
     private String description;
-    
-    
+        
     private double price;
     
     private Category category;
