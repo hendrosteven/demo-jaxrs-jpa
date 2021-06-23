@@ -5,11 +5,13 @@
  */
 package com.kelaskoding.resource;
 
+import com.kelaskoding.dto.CategoryRequest;
 import com.kelaskoding.entity.Category;
 import com.kelaskoding.repo.CategoryRepo;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -35,7 +37,11 @@ public class CategoryResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createOne(Category category) {
+    public Response createOne(@Valid CategoryRequest request) {
+        
+        Category category = new Category();
+        category.setName(request.getName());
+        
         repo.create(category);
         return Response.ok(category).build();
     }

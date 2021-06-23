@@ -5,11 +5,13 @@
  */
 package com.kelaskoding.resource;
 
+import com.kelaskoding.dto.ProductRequest;
 import com.kelaskoding.entity.Product;
 import com.kelaskoding.repo.ProductRepo;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -35,7 +37,15 @@ public class ProductResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createOne(Product product) {
+    public Response createOne(@Valid ProductRequest request) {
+        
+        Product product = new Product();
+        product.setCode(request.getCode());
+        product.setName(request.getName());
+        product.setDescription(request.getDescription());
+        product.setPrice(request.getPrice());
+        product.setCategory(request.getCategory());
+        
         repo.create(product);
         return Response.ok(product).build();
     }
